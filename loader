@@ -1,0 +1,22 @@
+local BASE = "https://raw.githubusercontent.com/dmitrik1488/VoltaraTest/refs/heads/main/"
+
+-- Шаг 1: загружаем library
+local library = loadstring(game:HttpGet(BASE .. "Section1"))()
+_G.VoltaraLib = library
+task.wait(0.3)
+
+-- Шаг 2: загружаем listing
+local listing = loadstring(game:HttpGet(BASE .. "Section2"))()
+_G.VoltaraList = listing
+task.wait(0.3)
+
+-- Шаг 3: патчим и запускаем Section3
+local s3 = game:HttpGet(BASE .. "Section3")
+s3 = "local library = _G.VoltaraLib\nlocal listing = _G.VoltaraList\n" .. s3
+loadstring(s3)()
+task.wait(0.5)
+
+-- Шаг 4: патчим и запускаем Section4
+local s4 = game:HttpGet(BASE .. "Section4")
+s4 = "local library = _G.VoltaraLib\n" .. s4
+loadstring(s4)()
