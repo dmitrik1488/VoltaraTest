@@ -3,7 +3,7 @@
 -- NOTE: SecondModule also loads library remotely on line 1.
 -- That line is patched below — it uses the local library above.
 -- ============================================================
-local library = library  -- injected from combined build
+
 
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
