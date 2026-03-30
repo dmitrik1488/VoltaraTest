@@ -4,8 +4,7 @@
 _G.X = _G.X or {}
 local X = _G.X
 
-X.library = library  -- injected from combined build
-X.listing = listing  -- injected from combined build
+
 local NormalColorBlock = {}  -- NOTE: replace with actual blockcolors data if needed
 local LZ4 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Vyrusspcs/weshkyv2/refs/heads/main/others/LZ4.lua"))()  -- LZ4 still loaded remotely
 print(X.library)
